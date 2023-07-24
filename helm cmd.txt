@@ -1,0 +1,9 @@
+helm upgrade datadog --set datadog.apiKey=$DD_API_KEY datadog/datadog -f dd-helm-chart-values/values-tolerations.yaml --set agents.image.doNotCheckTag=true --set clusterAgent.image.doNotCheckTag=true
+
+helm upgrade datadog --set datadog.apiKey=$DD_API_KEY datadog/datadog -f dd-helm-chart-values/values-kubelet.yaml --set agents.image.doNotCheckTag=true --set clusterAgent.image.doNotCheckTag=true
+
+helm upgrade datadog --set datadog.apiKey=$DD_API_KEY datadog/datadog -f dd-helm-chart-values/values-logs.yaml --set agents.image.doNotCheckTag=true --set clusterAgent.image.doNotCheckTag=true
+
+helm upgrade datadog --set datadog.apiKey=$DD_API_KEY datadog/datadog -f dd-helm-chart-values/values-apm.yaml --set agents.image.doNotCheckTag=true --set clusterAgent.image.doNotCheckTag=true
+
+helm upgrade datadog --set datadog.apiKey=$DD_API_KEY datadog/datadog -f dd-helm-chart-values/values-cluster-agent.yaml --set agents.image.doNotCheckTag=true --set clusterAgent.image.doNotCheckTag=true
